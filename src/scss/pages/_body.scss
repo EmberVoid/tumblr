@@ -1,0 +1,68 @@
+body{
+    background-color: $background-color;
+}
+
+main{
+    margin-top: 2em;
+}
+
+.profilePics{
+    background-color: red;
+}
+
+.content{
+    background-color: green;
+}
+
+.publicContent{
+    width: (100%/7);
+}
+
+.asideBar{
+    background-color: aquamarine;
+}
+
+.media{
+    overflow: visible;
+}
+
+.media-body{
+    background: #fff;
+    box-shadow: 1px 5px 15px $navSearchBar-color;
+}
+
+/*contentHeader*/
+
+.margin2em{
+    margin: 2em;    
+}
+.contentHeader-name{
+    display: inline-block;
+    font-weight: bold;
+}
+.contentHeader-follow{
+    display: inline-block;
+    color: $fontLink-color;
+}
+
+.contentHeader-cancel{
+    font-weight: bold;
+}
+.contentHeader-explore{
+    margin: 1em;
+}
+
+.contentHashtag{
+    margin: 0 2em 0 2em;
+}
+
+.list-group-item{
+    display: inline-block;
+    border: none;
+    color: $font-color;
+}
+
+.contentFooterNotes{
+    padding: 0;
+    margin: 0 2em 0 2em;
+}

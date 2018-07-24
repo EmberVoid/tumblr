@@ -5820,7 +5820,7 @@ button.close {
 
 .home {
   background-color: #36465d;
-  margin-top: 0; }
+  margin: 0; }
 
 input[type="text"], textarea {
   background-color: #2d3a4e;
@@ -5836,6 +5836,61 @@ input[type="text"], textarea {
 .btn {
   border: none;
   background-color: #2d3a4e; }
+
+body {
+  background-color: #d2dae6; }
+
+main {
+  margin-top: 2em; }
+
+.profilePics {
+  background-color: red; }
+
+.content {
+  background-color: green; }
+
+.publicContent {
+  width: 14.28571%; }
+
+.asideBar {
+  background-color: aquamarine; }
+
+.media {
+  overflow: visible; }
+
+.media-body {
+  background: #fff;
+  box-shadow: 1px 5px 15px #2d3a4e; }
+
+/*contentHeader*/
+.margin2em {
+  margin: 2em; }
+
+.contentHeader-name {
+  display: inline-block;
+  font-weight: bold; }
+
+.contentHeader-follow {
+  display: inline-block;
+  color: #529ecc; }
+
+.contentHeader-cancel {
+  font-weight: bold; }
+
+.contentHeader-explore {
+  margin: 1em; }
+
+.contentHashtag {
+  margin: 0 2em 0 2em; }
+
+.list-group-item {
+  display: inline-block;
+  border: none;
+  color: #565656; }
+
+.contentFooterNotes {
+  padding: 0;
+  margin: 0 2em 0 2em; }
 
 html {
   margin: 0;
