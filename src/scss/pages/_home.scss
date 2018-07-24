@@ -1,0 +1,24 @@
+// Home specific styles
+.home {
+  background-color: $brand-color;
+  margin-top: 0; 
+}
+
+input[type="text"], textarea {
+  background-color : $navSearchBar-color; 
+  border: none;
+}
+
+.nav-tabs li.active a{
+  background-color: $nav-tabs-active-color;
+  border: none;
+}
+
+.nav-tabs{
+  border: none;
+}
+
+.btn{
+  border: none;
+  background-color : $navSearchBar-color; 
+}

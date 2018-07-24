@@ -1,0 +1,17 @@
+// helpers load first
+@import "helpers/variables.scss";
+
+// load vendor libs, but just what you need
+@import "vendor/bootstrap-custom";
+
+// load components
+@import "components/buttons";
+
+// load components
+@import "pages/home";
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
