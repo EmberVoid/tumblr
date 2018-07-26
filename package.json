@@ -14,11 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "http-server": "^0.11.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
     "copy-and-watch": "^0.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "http-server": "^0.11.1",
     "node-sass": "^4.5.2"
   }
 }

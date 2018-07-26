@@ -1,6 +1,12 @@
 body{
+    margin-top: 5em;
     background-color: $background-color;
 }
+
+a { 
+    color: inherit; 
+} 
+
 
 main{
     margin-top: 2em;
@@ -26,9 +32,15 @@ main{
     overflow: visible;
 }
 
-.media-body{
+.media-bodyCard{
     background: #fff;
-    box-shadow: 1px 5px 15px $navSearchBar-color;
+}
+
+.media-bodyEven{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2em 0 2em 0;
 }
 
 /*contentHeader*/
@@ -38,17 +50,14 @@ main{
 }
 .contentHeader-name{
     display: inline-block;
-    font-weight: bold;
 }
 .contentHeader-follow{
     display: inline-block;
     color: $fontLink-color;
 }
 
-.contentHeader-cancel{
-    font-weight: bold;
-}
-.contentHeader-explore{
+.contentHeader-icons{
+    display: inline-block;
     margin: 1em;
 }
 
@@ -64,5 +73,41 @@ main{
 
 .contentFooterNotes{
     padding: 0;
-    margin: 0 2em 0 2em;
+    margin: 0 2em 2em 2em;
+}
+
+.footerEven{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*aside*/
+
+.asideBar{
+    background: #fff;
+} 
+
+hr {
+    margin-top: 0;
+    width: 100%;
+}
+
+.asideExplore{
+    color: $fontLink-color;
+}
+
+.media-bodySub{
+    color: $fontSub-color
+}
+
+/*Radar*/
+
+.radar{
+    margin-top: 2em;
+    background: #fff;
+}
+
+.radarImage{
+    margin-bottom: 2em;
 }

@@ -14,6 +14,22 @@ input[type="text"], textarea {
   border: none;
 }
 
+.nav-tabs li.active a:hover{
+  background-color: $nav-tabs-active-color;
+  border: none;
+  margin-right: 0;
+  line-height: 0;
+  border: 0;
+}
+
+.nav-tabs li a:hover{
+  background-color: $nav-tabs-active-color;
+  border: none;
+  margin-right: 0;
+  line-height: 0;
+  border: 0;
+}
+
 .nav-tabs{
   border: none;
 }
@@ -21,4 +37,8 @@ input[type="text"], textarea {
 .btn{
   border: none;
   background-color : $navSearchBar-color; 
+}
+
+.fullFluid{
+  width: 100%;
 }

@@ -12,8 +12,8 @@
 
 <body>
 
-  <nav class="navbar navbar-default navbar-static-top home">
-    <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top home">
+    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
 
@@ -80,58 +80,90 @@
   </nav>
 
   <main class="container">
+    <!--Container-->
     <div class="row">
-
-      <div class="col-lg-9 col-xs-12">
-
+      <div class="col-lg-9">
         <div class="media">
           <div class="media-left media-top">
             <a href="#">
-              <img class="media-object" src="img/chatContent.png" alt="...">
+              <img class="media-object" src="img/profile1.png" alt="...">
             </a>
           </div>
-          <div class="media-body">
-            <div class="publicContent col">
-              <span>Content</span>
+          <aricle class="media-body media-bodyCard">
+            <div class="media-bodyEven">
+              <a href="">
+                <figure>
+                  <img src="img/textPost.png" alt="Post Text" />
+                  <figcaption>Text</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/imagePost.png" alt="Post Image" />
+                  <figcaption>Photo</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/quotePost.png" alt="Post Quote" />
+                  <figcaption>Quote</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/linkPost.png" alt="Post Link" />
+                  <figcaption>Link</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/chatPost.png" alt="Post Chat" />
+                  <figcaption>Chat</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/headphonesPost.png" alt="Post Audio" />
+                  <figcaption>Audio</figcaption>
+                </figure>
+              </a>
+              <a href="">
+                <figure>
+                  <img src="img/videocameraPost.png" alt="Post Video" />
+                  <figcaption>Video</figcaption>
+                </figure>
+              </a>
             </div>
-            <div class="publicContent col">
-              <span>Content</span>
-            </div>
-            <div class="publicContent col">
-              <span>Content</span>
-            </div>
-            <div class="publicContent">
-              <span>Content</span>
-            </div>
-            <div class="publicContent">
-              <span>Content</span>
-            </div>
-            <div class="publicContent">
-              <span>Content</span>
-            </div>
-            <div class="publicContent">
-              <span>Content</span>
-            </div>
-          </div>
+          </aricle>
         </div>
 
         <div class="media">
           <div class="media-left media-top">
             <a href="#">
-              <img class="media-object" src="img/chatContent.png" alt="...">
+              <img class="media-object" src="img/profile2.png" alt="...">
             </a>
           </div>
-          <div class="media-body">
+          <div class="media-body media-bodyCard">
             <div class="contentHeader">
-              <p class="contentHeader-name margin2em"> Here's a blog: bob-straus</p>
-              <p class="contentHeader-follow margin2em"> Follow</p>
-              <span class="contentHeader-cancel pull-right"> X </span>
-              <span class="contentHeader-explore pull-right">
-                <img src="img/compassContent.png" alt="explore">
-              </span>
+              <div class="col-lg-6">
+                <p class="contentHeader-name margin2em"> Here's a blog: <b>bob-straus</b></p>
+                <a class="contentHeader-follow margin2em" href="..."> Follow</a>
+              </div>
+              <dir class="col-lg-2 col-lg-offset-4">
+                <span class="contentHeader-icons">
+                  <a href="">
+                    <img src="img/contentHeader-Cancel.png" alt="Cancel">
+                  </a>
+                </span>
+                <span class="contentHeader-icons">
+                  <a href="">
+                    <img src="img/compassContent.png" alt="Explore">
+                  </a>
+                </span>
+              </dir>
             </div>
             <div class="contentImage">
-              <img src="img/contentImage.png" alt="background" height="100%" width="100%">
+              <img src="img/contentImage.png" class="img-responsive" alt="background">
             </div>
             <div class="contentHashtag">
               <ul class="list-group">
@@ -143,26 +175,113 @@
             </div>
             <div "contentFooter">
               <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-5">
                   <p class="contentFooterNotes">234,005 Notes</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-6">
-                  <img src="img/compassContent.png" alt="img">
-                  <img src="img/compassContent.png" alt="img">
-                  <img src="img/compassContent.png" alt="img">
-                  <img src="img/compassContent.png" alt="img">
+                <div class="col-lg-3 col-lg-offset-4 footerEven">
+                  <a href="">
+                    <img src="img/footerSend.png" alt="img">
+                  </a>
+                  <a href="">
+                    <img src="img/footerMessage.png" alt="img">
+                  </a>
+                  <a href="">
+                    <img src="img/footerShuffle.png" alt="img">
+                  </a>
+                  <a href="">
+                    <img src="img/footerLove.png" alt="img">
+                  </a>
                 </div>
               </div>
             </div>
+            <!-- ContentFooter -->
+          </div>
+          <!-- Media Body -->
+        </div>
+        <!-- Media -->
+      </div>
+      <!-- Large Col -->
+
+      <aside class="col-lg-3 asideBar">
+        <!-- Aside -->
+        <div class="recommendedBlogsAside">
+          <h3>Recommended Blogs</h3>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/blog1.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Username</h4>
+              <p class="media-bodySub">Tumblr blog name</p>
+            </div>
+          </div>
+          <hr>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/blog2.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Username</h4>
+              <p class="media-bodySub">Tumblr blog name</p>
+            </div>
+          </div>
+          <hr>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/blog3.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Username</h4>
+              <p class="media-bodySub"> Tumblr blog name</p>
+            </div>
+          </div>
+          <hr>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/blog4.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Username</h4>
+              <p class="media-bodySub">Tumblr blog name</p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <h4 class="asideExplore">Explore Tumblr</h4>
+          </div>
+        </div>
+      </aside>
+
+      <div class="col-lg-3 radar">
+        <div class="recommendedBlogsAside">
+          <h3>Radar</h3>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/blog1.png" alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Username</h4>
+              <p class="media-bodySub">Tumblr blog name</p>
+            </div>
+          </div>
+          <div class="radarImage">
+            <img src="img/radar.png" class="img-responsive" alt="Responsive image">
           </div>
         </div>
       </div>
-
-      <div class="col-lg-3 col-xs-12 asideBar">
-        aside
-      </div>
-    </div>
+      <!--Row-->
   </main>
+  <!--Container-->
 
 </body>
 
