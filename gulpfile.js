@@ -16,11 +16,20 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('src/css'));
 });
 
+gulp.task('jshint', () => {
+    return gulp.src([
+        'src/js/main.js'
+    ])
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'))
+});
+
 gulp.task('js', () => {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'src/js/main.js'
     ])
         .pipe(gulp.dest('src/js'))
         .pipe(browserSync.stream());
@@ -81,10 +90,12 @@ gulp.task('serve', ['sassDIST'], () => {
 
     gulp.watch('src/scss/**/*.scss', ['sassDIST'], cb => cb).on('change', browserSync.reload);
     gulp.watch('src/img/**/*.png', ['img'], cb => cb);
+    gulp.watch('src/js/**/*.js', ['jshint'], cb => cb).on('change', browserSync.reload);
     gulp.watch('src/**/*.html', ['html'], cb => cb).on('change', browserSync.reload);
 });
 
 gulp.task('dev', [
+    'jshint',
     'js',
     'html',
     'sass',
