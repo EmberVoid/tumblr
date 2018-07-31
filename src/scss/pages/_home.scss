@@ -1,44 +1,70 @@
-// Home specific styles
-.home {
-  background-color: $brand-color;
-  margin: 0; 
+// Nav specific styles
+.home-Body {
+    background-color: $background-color;
+    margin: 0;
 }
 
-input[type="text"], textarea {
-  background-color : $navSearchBar-color; 
-  border: none;
+.navbar-body{
+    background-color: $brand-color;
 }
 
-.nav-tabs li.active a{
-  background-color: $nav-tabs-active-color;
-  border: none;
+.navbar-brand-sprite-logo {
+    background: url(../img/home/tumblr-logo.png);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
 }
 
-.nav-tabs li.active a:hover{
-  background-color: $nav-tabs-active-color;
-  border: none;
-  margin-right: 0;
-  line-height: 0;
-  border: 0;
+.nav-sprite-even{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.nav-tabs li a:hover{
-  background-color: $nav-tabs-active-color;
-  border: none;
-  margin-right: 0;
-  line-height: 0;
-  border: 0;
+.nav-sprite-evenXS{
+    display: flex;
+    justify-content: space-evenly;
+    display: inline-block;
 }
 
-.nav-tabs{
-  border: none;
+/*
+.nav-sprite {
+    background: url(../img/home/assets.png);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
 }
 
-.btn{
-  border: none;
-  background-color : $navSearchBar-color; 
+.nav-sprite-text {
+    background-position: -10px -230px;
 }
 
-.fullFluid{
-  width: 100%;
+.nav-sprite-camara {
+    background-position: -10px -98px;
 }
+
+.nav-sprite-quote {
+    background-position: -10px -186px;
+}
+
+.nav-sprite-link {
+    background-position: -10px -142px;
+}
+
+.nav-sprite-message {
+    background-position: -10px -10px;
+}
+
+.nav-sprite-audio {
+    background-position: -10px -54px;
+}
+
+.nav-sprite-video {
+    background-position: -10px -274px;
+}
+*/
+
+.form-control {
+    background-color : $navSearchBar-color; 
+    border: none;
+  }

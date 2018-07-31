@@ -1,18 +1,10 @@
 // helpers load first
 @import "helpers/variables.scss";
 
-// load vendor libs, but just what you need
-@import "vendor/bootstrap-custom";
-
 // load components
-@import "components/buttons";
-
-// load components
+@import "pages/login";
 @import "pages/home";
-@import "pages/body";
 
-html{
-    margin: 0;
-    padding: 0;
+body, html {
+    height: 100%;
 }
-

@@ -1,54 +1,97 @@
-/* Gulpfile.js */
-let gulp = require('gulp')
-let gutil =  require('gulp-util')
-let sass = require('gulp-sass')
-let webserver = require('gulp-webserver');
-let path = require('path')
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const jshint = require('gulp-jshint');
+const uglify = require('gulp-uglify');
 
-/* tasks */
-// gulp.task(
-//   name : String,
-//   deps : [] :: optional,
-//   cb : fn
-// )
+//DEV SERVER
+gulp.task('sass', () => {
+    return gulp.src([
+        'node_modules/bootstrap/scss/bootstrap.scss',
+        'node_modules/font-awesome/scss/font-awesome.scss',
+        'src/scss/*.scss'
+    ])
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(gulp.dest('src/css'));
+});
 
-/* Styles task */
-gulp.task('styles', () => {
-    return gulp.src('src/scss/main.scss')
-        .pipe(sass({includePaths: [
-                path.join(__dirname, 'node_modules/bootstrap-sass/assets/stylesheets'),
-                path.join(__dirname, 'src/scss')]
-            , outputStyle: 'compressed'}))
-        .pipe(gulp.dest('dist/css/'))
-})
+gulp.task('js', () => {
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/popper.js/dist/umd/popper.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ])
+        .pipe(gulp.dest('src/js'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('fonts', () => {
+    return gulp.src('node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest('src/fonts'));
+});
+
+gulp.task('dev', ['js', 'serve', 'font-awesome', 'fonts'])
+
+
+//DIST SERVER
 
 gulp.task('html', () => {
     return gulp.src('src/**/*.html')
         .pipe(gulp.dest('dist/'))
-})
+});
+
+gulp.task('sassDIST', () => {
+    return gulp.src([
+        'src/css/*.css',
+        'src/scss/*.scss'
+    ])
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('jsDIST', () => {
+    return gulp.src([
+        'src/js/jquery.min.js',
+        'src/js/popper.min.js',
+        'src/js/bootstrap.min.js'
+    ])
+        .pipe(uglify())
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('fontsDIST', () => {
+    return gulp.src('node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest('dist/fonts'));
+});
 
 gulp.task('img', () => {
-    return gulp.src('src//**/*.png')
-        .pipe(gulp.dest('dist/'))
-})
+    return gulp.src('src/img/**/*.{gif,jpg,png,svg,pdf}')
+        .pipe(gulp.dest('dist/img'))
+});
 
-gulp.task('watch', () => {
-    gulp.watch('src/scss/**/*.scss', ['styles'],cb => cb)
-    gulp.watch('src/**/*.html', ['html'],cb => cb)
-    gulp.watch('src/img/**/*.png', ['img'],cb => cb)
-})
+gulp.task('serve', ['sassDIST'], () => {
+    browserSync.init({
+        server: './dist'
+    });
 
-gulp.task('server', () => {
-    gulp.src('dist/')
-        .pipe(webserver({
-            livereload: true,
-            open: true
-        }))
-})
+    gulp.watch('src/scss/**/*.scss', ['sassDIST'], cb => cb).on('change', browserSync.reload);
+    gulp.watch('src/img/**/*.png', ['img'], cb => cb);
+    gulp.watch('src/**/*.html', ['html'], cb => cb).on('change', browserSync.reload);
+});
+
+gulp.task('dev', [
+    'js',
+    'html',
+    'sass',
+    'fonts',
+    'img'])
 
 gulp.task('start', [
-    'html',
-    'styles',
-    'server',
-    'watch'
-], cb => cb)
+    'fontsDIST',
+    'jsDIST',
+    'serve'])
